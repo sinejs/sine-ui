@@ -1,2 +1,3 @@
-# sine-ui
-UI components base on sine.js
+# sine UI
+
+UI component collection made with sine.js
