@@ -1,5 +1,5 @@
-<ul class="{{ options.insideBar?'navbar-nav':'nav' }} {{ options.flexColumn?'flex-column':'' }}">
+<ul class="{{ settings.insideBar?'navbar-nav':'nav' }} {{ settings.flexColumn?'flex-column':'' }}">
     <li class="nav-item" *n-repeat="item in items">
-        <span class="nav-link {{ item.active?'active':'' }} {{ item.disable?'disable':'' }}" *n-bind="item.label" @click="navigate(item)"></span>
+        <a class="nav-link span-nav-link {{ item.active?'active':'' }} {{ item.disable?'disable':'' }}" *n-bind="item.label" @click="navigate(item)"></a>
     </li>
 </ul>

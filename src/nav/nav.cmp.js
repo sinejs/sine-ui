@@ -1,4 +1,10 @@
 import template from './nav.html';
+import './nav.css';
+
+var defaults = {
+    flexColumn: false,
+            insideBar: false
+};
 
 @sine.decorator.component({
     namespace: 'sine.ui',
@@ -12,15 +18,13 @@ class NavComponent extends sine.Component {
     constructor() {
         super();
         this.items = [];
-        this.options = {
-            flexColumn: false,
-            insideBar: false
-        };
+        this.options = {};
+        this.settings = {};
     }
 
     onInit() {
         var self = this;
-
+        this.settings = sine.merge(defaults, this.options);       
         this.items.some(function (item) {
             if (item.active) {
                 self.navigate(item);

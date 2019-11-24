@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
+    "watch": "webpack --env.NODE_ENV=dev --watch",
     "build": "webpack --env.NODE_ENV=dev --progress --profile --colors",
     "build:dev": "webpack --env.NODE_ENV=dev --progress --profile --colors",
     "build:prod": "webpack --env.NODE_ENV=prod --progress --profile --colors"

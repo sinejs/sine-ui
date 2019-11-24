@@ -1,7 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" :href="brand.url" :n-bind="brand.label"></a>
+<nav class="navbar navbar-expand-lg" *n-class="css.nav">
+    <a class="navbar-brand" :href="brand.url" *n-bind="brand.label"></a>
+    <button class="navbar-toggler" type="button" @click="toggle(navbarSupportedContent)">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse">
-        <n-nav :items="items"></n-nav>
+    <div class="collapse navbar-collapse show" *n-name="navbarSupportedContent">
+        <n-nav :items="items" :options="navOptions"></n-nav>
     </div>
 </nav>
