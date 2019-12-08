@@ -1,7 +1,8 @@
 import template from './nav-bar.html';
 
 var defaults = {
-    color: 'light',
+    color: 'dark',
+    background: 'primary'
 };
 
 @sine.decorator.component({
@@ -26,7 +27,7 @@ class NavBarComponent extends sine.Component {
         this.settings = sine.merge(defaults, this.options);
 
         this.css = {
-            nav: sine.format('navbar-{0} bg-{0}', this.settings.color)
+            nav: sine.format('navbar-{0} bg-{1}', this.settings.color, this.settings.background)
         };
     }
 
